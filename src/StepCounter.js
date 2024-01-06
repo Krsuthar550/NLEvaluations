@@ -8,8 +8,9 @@ export default function StepCounter() {
     const [finalData,setFinal]=useState([]);
     
     function submitData(){
-       setFinal(finalData=[...finalData,userData])
-       setUserData(' ')
+       setUserData(userData)
+      //  setUserData(' ')
+       console.log(userData);
     }
 
   return (

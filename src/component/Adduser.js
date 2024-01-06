@@ -63,7 +63,7 @@ export default function Adduser() {
         <TextField label="City" value={userData["city"]}  onChange={(e)=>setUserData({...userData,"city":e.target.value})}type='text' margin='normal' variant='outlined' color='secondary' />
      </div>
      <div>
-        <TextField label="District" value={userData["district"]}  onChange={(e)=>setUserData({...userData,"name":e.target.value})} type='text' margin='normal' variant='outlined' color='secondary' />
+        <TextField label="District" value={userData["district"]}  onChange={(e)=>setUserData({...userData,"district":e.target.value})} type='text' margin='normal' variant='outlined' color='secondary' />
      </div>
      <div>
         <TextField label="State" value={userData["state"]}  onChange={(e)=>setUserData({...userData,"state":e.target.value})} type='text' margin='normal' variant='outlined' color='secondary' />
