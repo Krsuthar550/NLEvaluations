@@ -6,16 +6,16 @@ import ViewData from './component/ViewData';
 
 
 function App() {
-  const {finalData}=useContext(multiStep);
+  const {userData}=useContext(multiStep);
  
   return ( 
     <>
     <div className="App">
     
       <header className='App-Header'>
-        <h3 style={{color:'blue',textDecoration:'underline'}}>User Data</h3>
+        <h3 style={{color:'blue'}}>User Data</h3>
           <Adduser/>
-          {finalData.length>0 ? <ViewData/> :''}
+          {userData.length>0 ? <ViewData/> :''}
           </header>
       
     </div>

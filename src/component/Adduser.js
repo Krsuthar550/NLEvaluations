@@ -1,14 +1,14 @@
 import React,{useContext, useState} from 'react';
 import { Button,TextField } from '@material-ui/core'
-import {FormGroup,Typography,styled} from "@mui/material"
+import {FormGroup,Typography,styled } from "@mui/material"
 import { multiStep } from '../StepCounter';
 
 const Form=styled(FormGroup)`
-width:60%;
+width:80%;
 margin: 10% auto 0 auto;
 & div{
     margin-top:20px
-}
+};
 `
 
 export default function Adduser() {
@@ -28,6 +28,7 @@ export default function Adduser() {
       };
      
   return (
+   <div>
     <Form onSubmit={handleSubmit}>
         {currentStep===1 &&(
             <>
@@ -49,7 +50,7 @@ export default function Adduser() {
         <TextField label="Phone Number" value={userData["number"]}  onChange={(e)=>setUserData({...userData,"number":e.target.value})}  type= 'number'  margin='normal' variant='outlined' color='secondary' />
      </div>
      <div>
-        <Button varient='contained' color='primary' onClick={nextStep}>Next</Button>
+        <Button varient='contained'  color='primary' onClick={nextStep}>Next</Button>
      </div>
      </>
         )}
@@ -83,16 +84,18 @@ export default function Adduser() {
             <>
             <div>
                 <label>Your Likes And Dislikes</label>
-        <TextField label="Likes" value={userData["likes"]}  onChange={(e)=>setUserData({...userData,"":e.target.value})} type='text' margin='normal' variant='outlined' color='secondary' />
+        <TextField label="Likes" value={userData["likes"]}  onChange={(e)=>setUserData({...userData,"likes":e.target.value})} type='text' margin='normal' variant='outlined' color='primary' />
      </div>   <div>
         <Button varient='contained' color='primary' onClick={prevStep}>Prev</Button>
      </div>
      
         <div>
-        <Button varient='contained' color='primary' onClick={submitData}>Submit</Button>
+        <Button varient='contained' color='primary' onClick={submitData} >Submit</Button>
      </div>
             </>
         )}
    </Form>
+   </div>
   )
+  
 }

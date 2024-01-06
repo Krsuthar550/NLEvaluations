@@ -4,7 +4,7 @@ import { multiStep } from '../StepCounter';
 import { TableBody } from '@mui/material';
 
 export default function ViewData() {
-    const {userData}=useContext(multiStep);
+    const {finalData}=useContext(multiStep);
   return (
     <div>
 <TableContainer style={{display:'flex',justifyContent:'center'}}>
@@ -26,8 +26,8 @@ export default function ViewData() {
         </TableRow>
     </TableHead>
     <TableBody>
-      {userData.map(data=>{
-        return(
+            {finalData.map(data=>{
+            return(
             <TableRow key={data.email}>
             <TableCell>{data.name}</TableCell>
             <TableCell>{data.date}</TableCell>
@@ -39,9 +39,8 @@ export default function ViewData() {
             <TableCell>{data.state}</TableCell>
             <TableCell>{data.pincode}</TableCell>
             <TableCell>{data.likes}</TableCell>
-
             </TableRow>
-        )
+            )
         })}
     </TableBody>
 
